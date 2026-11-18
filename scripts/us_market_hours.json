@@ -1,0 +1,41 @@
+{
+  "_comment": "Fermetures et clôtures anticipées des bourses US (NYSE / Nasdaq), d'après le calendrier officiel nyse.com/trade/hours-calendars. Heures en heure de New York. À vérifier et compléter une fois par an.",
+  "closed": {
+    "2026-11-26": { "fr": "Thanksgiving", "en": "Thanksgiving" },
+    "2026-12-25": { "fr": "Noël", "en": "Christmas" },
+    "2027-01-01": { "fr": "Jour de l’an", "en": "New Year’s Day" },
+    "2027-01-18": { "fr": "Martin Luther King Day", "en": "Martin Luther King Day" },
+    "2027-02-15": { "fr": "Presidents’ Day", "en": "Presidents’ Day" },
+    "2027-03-26": { "fr": "Vendredi saint", "en": "Good Friday" },
+    "2027-05-31": { "fr": "Memorial Day", "en": "Memorial Day" },
+    "2027-06-18": { "fr": "Juneteenth (jour observé)", "en": "Juneteenth (observed)" },
+    "2027-07-05": { "fr": "Fête de l’Indépendance (jour observé)", "en": "Independence Day (observed)" },
+    "2027-09-06": { "fr": "Labor Day", "en": "Labor Day" },
+    "2027-11-25": { "fr": "Thanksgiving", "en": "Thanksgiving" },
+    "2027-12-24": { "fr": "Noël (jour observé)", "en": "Christmas (observed)" }
+  },
+  "early_close": {
+    "2026-11-27": "13:00",
+    "2026-12-24": "13:00",
+    "2027-11-26": "13:00"
+  },
+  "texts": {
+    "closed": {
+      "kind": { "fr": "Férié US", "en": "US holiday" },
+      "sub": { "fr": "Bourses US fermées · forex et or : très peu de volume", "en": "US exchanges closed · FX and gold: very thin volume" },
+      "explain": {
+        "fr": ["Un jour férié aux États-Unis : les bourses américaines sont fermées toute la journée.", "Le forex et l’or restent cotés, mais sans la plupart des acteurs américains : très peu de volume pendant la session de New York.", "Peu de volume veut dire des spreads plus larges et des mouvements parfois erratiques."],
+        "en": ["A US public holiday: US exchanges are closed all day.", "FX and gold still trade, but without most US participants: very thin volume during the New York session.", "Thin volume means wider spreads and sometimes erratic moves."]
+      }
+    },
+    "early": {
+      "kind": { "fr": "Séance courte", "en": "Short session" },
+      "title": { "fr": "Clôture anticipée des bourses US", "en": "Early close on US exchanges" },
+      "sub": { "fr": "Indices US · Or", "en": "US indices · Gold" },
+      "explain": {
+        "fr": ["Les bourses américaines ferment plus tôt que d’habitude ce jour-là, à {close} heure de New York.", "Séance américaine très courte, avec peu de volume. Le marché est souvent très calme, ou bouge sans vraie raison.", "Vérifie l’heure de fermeture chez ton broker : elle peut différer de celle de la bourse."],
+        "en": ["US exchanges close earlier than usual that day, at {close} New York time.", "A very short US session with little volume. Markets are often very quiet, or move for no real reason.", "Check your broker’s closing time: it can differ from the exchange’s."]
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {"title":"CPI m/m","country":"CAD","date":"2026-11-16T08:30:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"Median CPI y/y","country":"CAD","date":"2026-11-16T08:30:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"Trimmed CPI y/y","country":"CAD","date":"2026-11-16T08:30:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"Empire State Manufacturing Index","country":"USD","date":"2026-11-16T08:30:00-05:00","impact":"Medium","forecast":"","previous":""},
+  {"title":"Fed Chairman Warsh Speaks","country":"USD","date":"2026-11-16T12:00:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"RBA Gov Bullock Speaks","country":"AUD","date":"2026-11-16T17:50:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"Inflation Expectations q/q","country":"NZD","date":"2026-11-16T21:00:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"Core Retail Sales m/m","country":"USD","date":"2026-11-17T08:30:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"Retail Sales m/m","country":"USD","date":"2026-11-17T08:30:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"CPI y/y","country":"GBP","date":"2026-11-18T02:00:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"BOE Gov Bailey Speaks","country":"GBP","date":"2026-11-18T10:00:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"FOMC Meeting Minutes","country":"USD","date":"2026-11-18T14:00:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"Employment Change","country":"AUD","date":"2026-11-18T19:30:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"Unemployment Rate","country":"AUD","date":"2026-11-18T19:30:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"Unemployment Claims","country":"USD","date":"2026-11-19T08:30:00-05:00","impact":"Medium","forecast":"","previous":""},
+  {"title":"Loan Prime Rate","country":"CNY","date":"2026-11-19T20:00:00-05:00","impact":"High","forecast":"","previous":""},
+  {"title":"Retail Sales m/m","country":"GBP","date":"2026-11-20T02:00:00-05:00","impact":"Medium","forecast":"","previous":""},
+  {"title":"Bank Holiday","country":"EUR","date":"2026-11-20T00:00:00-05:00","impact":"Holiday","forecast":"","previous":""}
+]

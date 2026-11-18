@@ -1,0 +1,672 @@
+{
+  "_comment": "Dictionnaire de Wickless. 'rules' : expressions régulières testées dans l'ordre sur le titre Forex Factory (insensible à la casse) ; la première qui correspond donne le 'topic'. 'only' limite une règle à certaines devises. Les textes acceptent les variables {loc_fr}, {name_fr}, {short_fr}, {bank_fr}, {bankshort_fr}, {money_fr}, {assets_fr}, {name_en}, {short_en}, {bank_en}, {bankshort_en}, {money_en}, {assets_en}, {ccy}, {title}, {speaker}.",
+  "countries": {
+    "USD": {
+      "name_fr": "États-Unis",
+      "loc_fr": "aux États-Unis",
+      "short_fr": "US",
+      "bank_fr": "la Fed",
+      "bankshort_fr": "Fed",
+      "money_fr": "le dollar",
+      "assets_fr": "Indices US · Or · Paires en USD",
+      "name_en": "US",
+      "short_en": "US",
+      "bank_en": "the Fed",
+      "bankshort_en": "Fed",
+      "money_en": "the dollar",
+      "assets_en": "US indices · Gold · USD pairs"
+    },
+    "EUR": {
+      "name_fr": "zone euro",
+      "loc_fr": "en zone euro",
+      "short_fr": "zone euro",
+      "bank_fr": "la BCE",
+      "bankshort_fr": "BCE",
+      "money_fr": "l’euro",
+      "assets_fr": "Paires en EUR (EUR/USD, EUR/GBP…)",
+      "name_en": "Eurozone",
+      "short_en": "Eurozone",
+      "bank_en": "the ECB",
+      "bankshort_en": "ECB",
+      "money_en": "the euro",
+      "assets_en": "EUR pairs (EUR/USD, EUR/GBP…)"
+    },
+    "GBP": {
+      "name_fr": "Royaume-Uni",
+      "loc_fr": "au Royaume-Uni",
+      "short_fr": "UK",
+      "bank_fr": "la Banque d’Angleterre",
+      "bankshort_fr": "BoE",
+      "money_fr": "la livre",
+      "assets_fr": "Paires en GBP (GBP/USD, EUR/GBP…)",
+      "name_en": "UK",
+      "short_en": "UK",
+      "bank_en": "the Bank of England",
+      "bankshort_en": "BoE",
+      "money_en": "the pound",
+      "assets_en": "GBP pairs (GBP/USD, EUR/GBP…)"
+    },
+    "JPY": {
+      "name_fr": "Japon",
+      "loc_fr": "au Japon",
+      "short_fr": "Japon",
+      "bank_fr": "la Banque du Japon",
+      "bankshort_fr": "BoJ",
+      "money_fr": "le yen",
+      "assets_fr": "Paires en JPY (USD/JPY, EUR/JPY…)",
+      "name_en": "Japan",
+      "short_en": "Japan",
+      "bank_en": "the Bank of Japan",
+      "bankshort_en": "BoJ",
+      "money_en": "the yen",
+      "assets_en": "JPY pairs (USD/JPY, EUR/JPY…)"
+    },
+    "CHF": {
+      "name_fr": "Suisse",
+      "loc_fr": "en Suisse",
+      "short_fr": "Suisse",
+      "bank_fr": "la Banque nationale suisse",
+      "bankshort_fr": "BNS",
+      "money_fr": "le franc suisse",
+      "assets_fr": "Paires en CHF (USD/CHF, EUR/CHF…)",
+      "name_en": "Switzerland",
+      "short_en": "Swiss",
+      "bank_en": "the Swiss National Bank",
+      "bankshort_en": "SNB",
+      "money_en": "the Swiss franc",
+      "assets_en": "CHF pairs (USD/CHF, EUR/CHF…)"
+    },
+    "CAD": {
+      "name_fr": "Canada",
+      "loc_fr": "au Canada",
+      "short_fr": "Canada",
+      "bank_fr": "la Banque du Canada",
+      "bankshort_fr": "BoC",
+      "money_fr": "le dollar canadien",
+      "assets_fr": "Paires en CAD (USD/CAD, CAD/JPY…)",
+      "name_en": "Canada",
+      "short_en": "Canada",
+      "bank_en": "the Bank of Canada",
+      "bankshort_en": "BoC",
+      "money_en": "the Canadian dollar",
+      "assets_en": "CAD pairs (USD/CAD, CAD/JPY…)"
+    },
+    "AUD": {
+      "name_fr": "Australie",
+      "loc_fr": "en Australie",
+      "short_fr": "AUD",
+      "bank_fr": "la Banque de réserve d’Australie",
+      "bankshort_fr": "RBA",
+      "money_fr": "le dollar australien",
+      "assets_fr": "Paires en AUD (AUD/USD, AUD/JPY…)",
+      "name_en": "Australia",
+      "short_en": "AUD",
+      "bank_en": "the Reserve Bank of Australia",
+      "bankshort_en": "RBA",
+      "money_en": "the Australian dollar",
+      "assets_en": "AUD pairs (AUD/USD, AUD/JPY…)"
+    },
+    "NZD": {
+      "name_fr": "Nouvelle-Zélande",
+      "loc_fr": "en Nouvelle-Zélande",
+      "short_fr": "NZ",
+      "bank_fr": "la banque centrale néo-zélandaise",
+      "bankshort_fr": "RBNZ",
+      "money_fr": "le dollar néo-zélandais",
+      "assets_fr": "Paires en NZD (NZD/USD, AUD/NZD…)",
+      "name_en": "New Zealand",
+      "short_en": "NZ",
+      "bank_en": "the Reserve Bank of New Zealand",
+      "bankshort_en": "RBNZ",
+      "money_en": "the New Zealand dollar",
+      "assets_en": "NZD pairs (NZD/USD, AUD/NZD…)"
+    }
+  },
+  "rules": [
+    {
+      "match": "press conference",
+      "topic": "press"
+    },
+    {
+      "match": "(federal funds rate|main refinancing rate|official bank rate|policy rate|overnight rate|cash rate|monetary policy statement|rate statement|fomc statement|monetary policy summary|official bank rate votes|monetary policy assessment|economic projections|deposit facility rate)",
+      "topic": "rate"
+    },
+    {
+      "match": "(minutes|meeting accounts|summary of opinions)",
+      "topic": "minutes"
+    },
+    {
+      "match": "^(?P<speaker>.+?) (speaks|testifies)$",
+      "topic": "speech"
+    },
+    {
+      "match": "core pce",
+      "topic": "pce"
+    },
+    {
+      "match": "^adp ",
+      "topic": "adp"
+    },
+    {
+      "match": "non-farm employment change",
+      "topic": "nfp",
+      "only": [
+        "USD"
+      ]
+    },
+    {
+      "match": "(average hourly earnings|employment change|unemployment rate|claimant count|average earnings index|employment situation)",
+      "topic": "jobs"
+    },
+    {
+      "match": "(cpi|hicp|consumer price)",
+      "topic": "cpi"
+    },
+    {
+      "match": "(ppi|producer price)",
+      "topic": "ppi"
+    },
+    {
+      "match": "advance gdp",
+      "topic": "gdp_adv",
+      "only": [
+        "USD"
+      ]
+    },
+    {
+      "match": "gdp",
+      "topic": "gdp"
+    },
+    {
+      "match": "retail sales",
+      "topic": "retail"
+    },
+    {
+      "match": "(pmi|ism )",
+      "topic": "pmi"
+    },
+    {
+      "match": "inflation expectations",
+      "topic": "infexp"
+    },
+    {
+      "match": "unemployment claims",
+      "topic": "claims"
+    }
+  ],
+  "topics": {
+    "press": {
+      "kind": "rate",
+      "major": true,
+      "priority": 9,
+      "title": {
+        "fr": "Conférence de presse de {bank_fr}",
+        "en": "{bankshort_en} press conference"
+      },
+      "short": {
+        "fr": "Conf. {bankshort_fr}",
+        "en": "{bankshort_en} presser"
+      },
+      "explain": {
+        "fr": [
+          "Le patron de {bank_fr} explique la décision de taux et répond aux questions des journalistes.",
+          "Le ton compte autant que la décision : une phrase sur la suite peut faire bouger fortement {money_fr}.",
+          "La volatilité peut durer toute la conférence, questions comprises."
+        ],
+        "en": [
+          "The head of {bank_en} explains the rate decision and takes questions from journalists.",
+          "The tone matters as much as the decision: one line about what comes next can move {money_en} sharply.",
+          "Volatility can last for the whole conference, Q&A included."
+        ]
+      }
+    },
+    "rate": {
+      "kind": "rate",
+      "major": true,
+      "priority": 10,
+      "title": {
+        "fr": "Décision de taux de {bank_fr}",
+        "en": "{bankshort_en} rate decision"
+      },
+      "short": {
+        "fr": "Taux {bankshort_fr}",
+        "en": "{bankshort_en} rates"
+      },
+      "explain": {
+        "fr": [
+          "{bank_fr} annonce son taux directeur et publie son communiqué.",
+          "C’est l’événement le plus important pour {money_fr} : une surprise sur le taux ou sur le message fait bouger le marché en quelques secondes.",
+          "Une conférence de presse suit souvent : la volatilité peut revenir pendant l’heure qui suit."
+        ],
+        "en": [
+          "{bank_en} announces its policy rate and releases its statement.",
+          "It’s the biggest event for {money_en}: a surprise on the rate or the message moves the market within seconds.",
+          "A press conference often follows: volatility can come back within the next hour."
+        ]
+      }
+    },
+    "minutes": {
+      "kind": "minutes",
+      "major": false,
+      "priority": 6,
+      "title": {
+        "fr": "Compte rendu de {bank_fr}",
+        "en": "{bankshort_en} minutes"
+      },
+      "short": {
+        "fr": "Minutes {bankshort_fr}",
+        "en": "{bankshort_en} minutes"
+      },
+      "explain": {
+        "fr": [
+          "Le compte rendu détaillé de la dernière réunion de {bank_fr}.",
+          "Il montre si les membres penchent vers des baisses ou des hausses de taux : le marché le lit très vite et {money_fr} réagit.",
+          "La décision est déjà connue : c’est le ton des débats qui peut surprendre."
+        ],
+        "en": [
+          "The detailed record of {bank_en}’s last meeting.",
+          "It shows whether members lean towards cuts or hikes: markets read it fast and {money_en} reacts.",
+          "The decision is already known: it’s the tone of the debate that can surprise."
+        ]
+      }
+    },
+    "speech": {
+      "kind": "speech",
+      "major": false,
+      "priority": 5,
+      "title": {
+        "fr": "Discours · {bankshort_fr} ({speaker})",
+        "en": "Speech · {bankshort_en} ({speaker})"
+      },
+      "short": {
+        "fr": "{bankshort_fr} ({speaker})",
+        "en": "{bankshort_en} ({speaker})"
+      },
+      "explain": {
+        "fr": [
+          "Une prise de parole publique d’un dirigeant de {bank_fr}.",
+          "Le marché guette le moindre indice sur les prochaines décisions de taux : une seule phrase peut faire bouger {money_fr}.",
+          "Contrairement à une stat, on ne sait pas à quelle minute arrive la phrase qui compte, questions comprises."
+        ],
+        "en": [
+          "A public appearance by a {bank_en} policymaker.",
+          "Markets look for any hint about the next rate decisions: a single line can move {money_en}.",
+          "Unlike a data release, you don’t know which minute the key line will come, Q&A included."
+        ]
+      }
+    },
+    "pce": {
+      "kind": "data",
+      "major": true,
+      "priority": 8,
+      "title": {
+        "fr": "Inflation US (PCE)",
+        "en": "US inflation (PCE)"
+      },
+      "short": {
+        "fr": "PCE US",
+        "en": "US PCE"
+      },
+      "explain": {
+        "fr": [
+          "L’évolution des prix payés par les ménages américains, hors alimentation et énergie dans sa version « core ».",
+          "C’est l’indicateur d’inflation que la Fed suit en priorité : une surprise fait bouger le dollar, les indices US et l’or.",
+          "L’inflation CPI, publiée avant, donne souvent une idée du chiffre, mais la première minute peut rester agitée."
+        ],
+        "en": [
+          "The change in prices paid by US households, excluding food and energy in its “core” version.",
+          "It’s the Fed’s preferred inflation gauge: a surprise moves the dollar, US indices and gold.",
+          "CPI, released earlier, often hints at the number, but the first minute can still be choppy."
+        ]
+      }
+    },
+    "nfp": {
+      "kind": "data",
+      "major": true,
+      "priority": 9,
+      "title": {
+        "fr": "Emploi aux États-Unis (NFP)",
+        "en": "US jobs report (NFP)"
+      },
+      "short": {
+        "fr": "NFP",
+        "en": "NFP"
+      },
+      "explain": {
+        "fr": [
+          "Le rapport mensuel sur l’emploi américain : créations d’emplois, taux de chômage et salaires.",
+          "C’est l’une des publications les plus suivies au monde : elle change la vision de la croissance et des taux de la Fed.",
+          "Plusieurs chiffres tombent à la même seconde : les mouvements peuvent être violents et partir dans les deux sens."
+        ],
+        "en": [
+          "The monthly US jobs report: job creation, unemployment rate and wages.",
+          "It’s one of the most watched releases in the world: it shifts the outlook for growth and Fed rates.",
+          "Several figures land at the same second: moves can be violent and go both ways."
+        ]
+      }
+    },
+    "jobs": {
+      "kind": "data",
+      "major": true,
+      "priority": 7,
+      "title": {
+        "fr": "Emploi {loc_fr}",
+        "en": "{name_en} jobs report"
+      },
+      "short": {
+        "fr": "Emploi {short_fr}",
+        "en": "{short_en} jobs"
+      },
+      "explain": {
+        "fr": [
+          "Les chiffres de l’emploi {loc_fr} : créations d’emplois, chômage ou salaires selon la publication.",
+          "{bank_fr} les regarde de près pour décider de ses taux : une surprise fait souvent bouger {money_fr} de façon nette.",
+          "Quand plusieurs chiffres tombent ensemble, la première réaction peut se retourner s’ils se contredisent."
+        ],
+        "en": [
+          "Employment figures for {name_en}: job creation, unemployment or wages depending on the release.",
+          "{bank_en} watches them closely when setting rates: a surprise often moves {money_en} sharply.",
+          "When several figures land together, the first move can reverse if they disagree."
+        ]
+      }
+    },
+    "adp": {
+      "kind": "data",
+      "major": false,
+      "priority": 4,
+      "title": {
+        "fr": "Emploi privé US (ADP)",
+        "en": "US private payrolls (ADP)"
+      },
+      "short": {
+        "fr": "ADP",
+        "en": "ADP"
+      },
+      "explain": {
+        "fr": [
+          "L’estimation des créations d’emplois dans le secteur privé américain, publiée deux jours avant le rapport officiel.",
+          "Le marché s’en sert comme avant-goût du NFP : une grosse surprise peut faire bouger le dollar.",
+          "Le lien avec le chiffre officiel n’est pas toujours fiable."
+        ],
+        "en": [
+          "An estimate of US private-sector job creation, released two days before the official report.",
+          "Markets use it as a preview of NFP: a big surprise can move the dollar.",
+          "Its link to the official number isn’t always reliable."
+        ]
+      }
+    },
+    "cpi": {
+      "kind": "data",
+      "major": true,
+      "priority": 8,
+      "title": {
+        "fr": "Inflation {loc_fr} (CPI)",
+        "en": "{name_en} inflation (CPI)"
+      },
+      "short": {
+        "fr": "CPI {short_fr}",
+        "en": "{short_en} CPI"
+      },
+      "explain": {
+        "fr": [
+          "L’évolution des prix à la consommation {loc_fr}.",
+          "C’est l’un des chiffres que {bank_fr} surveille le plus pour fixer ses taux : une surprise change les attentes et fait bouger {money_fr}.",
+          "Plusieurs mesures tombent souvent en même temps : la première réaction peut se retourner si elles se contredisent."
+        ],
+        "en": [
+          "The change in consumer prices in {name_en}.",
+          "It’s one of the figures {bank_en} watches most when setting rates: a surprise shifts expectations and moves {money_en}.",
+          "Several measures often land at once: the first move can reverse if they disagree."
+        ]
+      }
+    },
+    "ppi": {
+      "kind": "data",
+      "major": false,
+      "priority": 4,
+      "title": {
+        "fr": "Prix à la production {loc_fr}",
+        "en": "{name_en} producer prices (PPI)"
+      },
+      "short": {
+        "fr": "PPI {short_fr}",
+        "en": "{short_en} PPI"
+      },
+      "explain": {
+        "fr": [
+          "L’évolution des prix payés aux producteurs {loc_fr}.",
+          "Une hausse peut se retrouver plus tard dans les prix à la consommation : le marché y voit un signal sur l’inflation et les taux.",
+          "Souvent moins suivi que le CPI, mais il peut surprendre."
+        ],
+        "en": [
+          "The change in prices received by producers in {name_en}.",
+          "Rises can later feed into consumer prices: markets read it as a signal on inflation and rates.",
+          "Usually less watched than CPI, but it can surprise."
+        ]
+      }
+    },
+    "gdp_adv": {
+      "kind": "data",
+      "major": true,
+      "priority": 8,
+      "title": {
+        "fr": "Croissance US (PIB, 1re estimation)",
+        "en": "US growth (GDP, advance)"
+      },
+      "short": {
+        "fr": "PIB US",
+        "en": "US GDP"
+      },
+      "explain": {
+        "fr": [
+          "La première mesure de la croissance de l’économie américaine sur le trimestre.",
+          "Une croissance plus forte ou plus faible que prévu change ce que le marché attend de la Fed : dollar, indices US et or réagissent.",
+          "C’est la version qui surprend le plus ; les estimations suivantes la révisent."
+        ],
+        "en": [
+          "The first reading of US economic growth for the quarter.",
+          "Stronger or weaker growth than expected changes what markets expect from the Fed: the dollar, US indices and gold react.",
+          "This is the reading that surprises most; later estimates revise it."
+        ]
+      }
+    },
+    "gdp": {
+      "kind": "data",
+      "major": false,
+      "priority": 5,
+      "title": {
+        "fr": "Croissance {loc_fr} (PIB)",
+        "en": "{name_en} growth (GDP)"
+      },
+      "short": {
+        "fr": "PIB {short_fr}",
+        "en": "{short_en} GDP"
+      },
+      "explain": {
+        "fr": [
+          "La mesure de la croissance de l’économie {loc_fr}.",
+          "Une surprise change la vision de l’économie et des taux de {bank_fr}, et donc {money_fr}.",
+          "Les estimations révisées surprennent en général moins que la première."
+        ],
+        "en": [
+          "The measure of economic growth in {name_en}.",
+          "A surprise changes the view on the economy and on {bank_en}’s rates, and so {money_en}.",
+          "Revised estimates usually surprise less than the first one."
+        ]
+      }
+    },
+    "retail": {
+      "kind": "data",
+      "major": false,
+      "priority": 5,
+      "title": {
+        "fr": "Ventes au détail {short_fr}",
+        "en": "{short_en} retail sales"
+      },
+      "short": {
+        "fr": "Ventes détail {short_fr}",
+        "en": "{short_en} retail sales"
+      },
+      "explain": {
+        "fr": [
+          "L’évolution des dépenses des ménages en magasin et en ligne sur un mois.",
+          "La consommation pèse lourd dans l’économie : un chiffre fort ou faible change la vision de la croissance et des taux.",
+          "La première minute est souvent agitée, surtout si plusieurs chiffres vont dans des sens opposés."
+        ],
+        "en": [
+          "The monthly change in household spending, in stores and online.",
+          "Consumption is a big part of the economy: a strong or weak print changes the outlook for growth and rates.",
+          "The first minute is often choppy, especially if several figures point in opposite directions."
+        ]
+      }
+    },
+    "pmi": {
+      "kind": "data",
+      "major": false,
+      "priority": 4,
+      "title": {
+        "fr": "Indice d’activité {short_fr} (PMI)",
+        "en": "{short_en} business activity (PMI)"
+      },
+      "short": {
+        "fr": "PMI {short_fr}",
+        "en": "{short_en} PMI"
+      },
+      "explain": {
+        "fr": [
+          "Une enquête auprès des directeurs d’achat sur l’activité du mois : au-dessus de 50, l’activité progresse.",
+          "C’est l’un des premiers signaux sur l’économie du mois : une surprise peut faire bouger {money_fr}.",
+          "Les versions « flash » sortent avant les chiffres définitifs et surprennent davantage."
+        ],
+        "en": [
+          "A survey of purchasing managers on the month’s activity: above 50 means activity is growing.",
+          "It’s one of the first signals on the month’s economy: a surprise can move {money_en}.",
+          "“Flash” readings come out before the final numbers and surprise more."
+        ]
+      }
+    },
+    "infexp": {
+      "kind": "data",
+      "major": false,
+      "priority": 4,
+      "title": {
+        "fr": "Anticipations d’inflation {loc_fr}",
+        "en": "{name_en} inflation expectations"
+      },
+      "short": {
+        "fr": "Anticip. inflation {short_fr}",
+        "en": "{short_en} inflation exp."
+      },
+      "explain": {
+        "fr": [
+          "Une enquête sur l’inflation que les entreprises ou les ménages attendent dans les prochaines années.",
+          "{bank_fr} s’en sert pour juger si l’inflation est sous contrôle : une hausse renforce les paris sur des taux élevés.",
+          "Ça concerne surtout les paires en {ccy}."
+        ],
+        "en": [
+          "A survey of the inflation businesses or households expect over the coming years.",
+          "{bank_en} uses it to judge whether inflation is under control: a rise supports bets on high rates.",
+          "It mainly affects {ccy} pairs."
+        ]
+      }
+    },
+    "claims": {
+      "kind": "data",
+      "major": false,
+      "priority": 3,
+      "title": {
+        "fr": "Inscriptions au chômage US",
+        "en": "US jobless claims"
+      },
+      "short": {
+        "fr": "Chômage hebdo US",
+        "en": "US jobless claims"
+      },
+      "explain": {
+        "fr": [
+          "Le nombre de nouvelles inscriptions au chômage aux États-Unis sur la semaine.",
+          "C’est le chiffre le plus fréquent sur la santé du marché du travail : une forte variation peut faire bouger le dollar.",
+          "Publié chaque jeudi, souvent en même temps que d’autres stats US."
+        ],
+        "en": [
+          "The number of new US jobless claims over the week.",
+          "It’s the most frequent read on the labour market: a big change can move the dollar.",
+          "Released every Thursday, often alongside other US data."
+        ]
+      }
+    },
+    "generic": {
+      "kind": "data",
+      "major": false,
+      "priority": 1,
+      "title": {
+        "fr": "{title} ({short_fr})",
+        "en": "{title} ({short_en})"
+      },
+      "short": {
+        "fr": "{title}",
+        "en": "{title}"
+      },
+      "explain": {
+        "fr": [
+          "Une publication que Forex Factory classe à fort impact pour {money_fr}.",
+          "Un chiffre différent de ce que le marché attend peut provoquer un mouvement rapide sur les paires en {ccy}.",
+          "Pas encore d’explication détaillée pour cette annonce dans Wickless."
+        ],
+        "en": [
+          "A release Forex Factory rates as high impact for {money_en}.",
+          "A number different from what markets expect can trigger a quick move on {ccy} pairs.",
+          "No detailed explanation for this release in Wickless yet."
+        ]
+      }
+    }
+  },
+  "labels": {
+    "fr": [
+      "C’est quoi",
+      "Pourquoi ça bouge",
+      "À savoir"
+    ],
+    "en": [
+      "What it is",
+      "Why it moves",
+      "Good to know"
+    ],
+    "note_fr": [
+      "C’est quoi",
+      "Ce que ça change",
+      "À savoir"
+    ],
+    "note_en": [
+      "What it is",
+      "What it changes",
+      "Good to know"
+    ]
+  },
+  "holiday": {
+    "kind": {
+      "fr": "Férié {short_fr}",
+      "en": "{short_en} holiday"
+    },
+    "title": {
+      "fr": "Jour férié {loc_fr}",
+      "en": "{name_en} bank holiday"
+    },
+    "sub": {
+      "fr": "Banques fermées · liquidité plus faible sur les paires en {ccy}",
+      "en": "Banks closed · thinner liquidity on {ccy} pairs"
+    },
+    "explain": {
+      "fr": [
+        "Un jour férié {loc_fr} : les banques et souvent la bourse locale sont fermées.",
+        "Moins d’acteurs sur le marché : les paires en {ccy} sont plus calmes, avec parfois des spreads plus larges.",
+        "Les annonces de ce pays sont rares ce jour-là."
+      ],
+      "en": [
+        "A public holiday in {name_en}: banks and often the local exchange are closed.",
+        "Fewer participants: {ccy} pairs are quieter, sometimes with wider spreads.",
+        "Releases from this country are rare on that day."
+      ]
+    }
+  }
+}
