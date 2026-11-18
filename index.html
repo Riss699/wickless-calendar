@@ -156,7 +156,10 @@ button:focus-visible,select:focus-visible{outline:2px solid var(--ink);outline-o
 
 /* Bandeaux qui défilent avec la page */
 .mq{margin:0 calc(50% - 50vw);padding:6px 0;overflow:hidden;display:flex;flex-direction:column;gap:2px;pointer-events:none;user-select:none}
-.mq-row{display:flex;align-items:center;gap:.45em;white-space:nowrap;font-size:clamp(44px,7.5vw,112px);font-weight:600;letter-spacing:-.045em;line-height:1.08;will-change:transform}
+.mq-row{display:flex;width:max-content;white-space:nowrap;font-size:clamp(44px,7.5vw,112px);font-weight:600;letter-spacing:-.045em;line-height:1.08;will-change:transform;animation:mq var(--mq-dur,60s) linear infinite;animation-delay:var(--mq-delay,0s)}
+.mq-row.r2{animation-direction:reverse}
+.mq-half{display:flex;align-items:center;flex:0 0 auto;gap:.45em;padding-right:.45em}
+@keyframes mq{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 .mq-row i{display:inline-block;flex:0 0 auto;width:.26em;height:.26em;border-radius:50%}
 .mq-row.r2 span{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1.2px var(--ink)}
 
@@ -592,13 +595,17 @@ button:focus-visible,select:focus-visible{outline:2px solid var(--ink);outline-o
   function marquee(row1) {
     var Lx = L();
     var a = row1.length ? row1 : Lx.slogans;
-    var reps = Math.max(3, Math.ceil(12 / a.length));
+    // Bandeau en boucle : deux moitiés identiques, l'animation décale de -50 %.
+    // Le retard négatif calé sur l'horloge garde la position quand la page se redessine (chaque minute).
     function line(items, cls) {
-      var h = '';
+      var reps = Math.max(2, Math.ceil(12 / items.length));
+      var h = '', chars = 0;
       for (var r = 0; r < reps; r++) {
-        items.forEach(function (t, i) { h += '<span>' + esc(t) + '</span><i class="sw-' + SW[(i + r) % SW.length] + '"></i>'; });
+        items.forEach(function (t, i) { h += '<span>' + esc(t) + '</span><i class="sw-' + SW[(i + r) % SW.length] + '"></i>'; chars += t.length + 2; });
       }
-      return '<div class="mq-row ' + cls + '">' + h + '</div>';
+      var dur = Math.max(30, Math.round(chars * 0.4));
+      var delay = -((Date.now() / 1000) % dur);
+      return '<div class="mq-row ' + cls + '" style="--mq-dur:' + dur + 's;--mq-delay:' + delay.toFixed(2) + 's"><div class="mq-half">' + h + '</div><div class="mq-half">' + h + '</div></div>';
     }
     return '<section class="mq" aria-hidden="true">' + line(a, 'r1') + line(Lx.slogans, 'r2') + '</section>';
   }
@@ -896,16 +903,6 @@ button:focus-visible,select:focus-visible{outline:2px solid var(--ink);outline-o
     if (par && !RM) {
       par.style.transform = 'translate3d(0,' + (sc * 0.14).toFixed(1) + 'px,0)';
       par.style.opacity = String(Math.max(0, 1 - sc / 620).toFixed(3));
-    }
-    var mqs = document.querySelectorAll('.mq');
-    for (var i = 0; i < mqs.length; i++) {
-      var r = mqs[i].getBoundingClientRect();
-      var p = (vh - r.top) / (vh + r.height);
-      var x = (p - 0.5) * (RM ? 0 : 640);
-      var a = mqs[i].querySelector('.r1');
-      var b = mqs[i].querySelector('.r2');
-      if (a) { a.style.transform = 'translate3d(' + (-x - 300).toFixed(1) + 'px,0,0)'; }
-      if (b) { b.style.transform = 'translate3d(' + (x - 600).toFixed(1) + 'px,0,0)'; }
     }
   }
   function queueFx() { if (!fxPending) { fxPending = true; requestAnimationFrame(scrollFx); } }
