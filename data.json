@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-18T01:00:00Z",
+  "generatedAt": "2026-11-18T09:06:15Z",
   "coverage": {
     "from": "2026-11-15",
-    "to": "2026-11-21"
+    "to": "2026-11-20"
   },
   "events": [
     {
-      "id": "2026-11-16-cad-cpi",
+      "id": "2026-11-16-1330-cad-cpi",
       "time": "2026-11-16T13:30:00Z",
       "ccy": "CAD",
       "kind": "data",
@@ -28,43 +28,48 @@
         "fr": "Paires en CAD (USD/CAD, CAD/JPY…)",
         "en": "CAD pairs (USD/CAD, CAD/JPY…)"
       },
-      "note": {
-        "fr": "3 chiffres publiés en même temps : CPI m/m, CPI médian et CPI tronqué.",
-        "en": "3 figures at once: CPI m/m, median CPI and trimmed CPI."
-      },
       "explain": {
         "fr": [
           {
             "label": "C’est quoi",
-            "text": "L’évolution des prix à la consommation au Canada. La Banque du Canada suit aussi deux mesures « de fond », médiane et tronquée, qui enlèvent les variations extrêmes."
+            "text": "L’évolution des prix à la consommation au Canada."
           },
           {
             "label": "Pourquoi ça bouge",
-            "text": "C’est la donnée clé pour les décisions de taux de la Banque du Canada : une surprise change les attentes et fait bouger le dollar canadien."
+            "text": "C’est l’un des chiffres que la Banque du Canada surveille le plus pour fixer ses taux : une surprise change les attentes et fait bouger le dollar canadien."
           },
           {
             "label": "À savoir",
-            "text": "Trois chiffres tombent à la même seconde : la première réaction peut partir dans un sens puis se retourner si les mesures se contredisent."
+            "text": "Plusieurs mesures tombent souvent en même temps : la première réaction peut se retourner si elles se contredisent."
           }
         ],
         "en": [
           {
             "label": "What it is",
-            "text": "The change in consumer prices in Canada. The Bank of Canada also watches two “core” measures, median and trimmed, which strip out extreme moves."
+            "text": "The change in consumer prices in Canada."
           },
           {
             "label": "Why it moves",
-            "text": "It’s the key input for the Bank of Canada’s rate decisions: a surprise shifts expectations and moves the Canadian dollar."
+            "text": "It’s one of the figures the Bank of Canada watches most when setting rates: a surprise shifts expectations and moves the Canadian dollar."
           },
           {
             "label": "Good to know",
-            "text": "Three figures land at the same second: the first move can go one way, then reverse if the measures disagree."
+            "text": "Several measures often land at once: the first move can reverse if they disagree."
           }
         ]
+      },
+      "source": [
+        "CPI m/m",
+        "Median CPI y/y",
+        "Trimmed CPI y/y"
+      ],
+      "note": {
+        "fr": "3 chiffres publiés en même temps : CPI m/m, Median CPI y/y, Trimmed CPI y/y.",
+        "en": "3 figures at once: CPI m/m, Median CPI y/y, Trimmed CPI y/y."
       }
     },
     {
-      "id": "2026-11-16-usd-warsh",
+      "id": "2026-11-16-1700-usd-speech",
       "time": "2026-11-16T17:00:00Z",
       "ccy": "USD",
       "kind": "speech",
@@ -74,8 +79,8 @@
         "after": null
       },
       "title": {
-        "fr": "Discours du président de la Fed (Warsh)",
-        "en": "Fed Chair Warsh speaks"
+        "fr": "Discours · Fed (Warsh)",
+        "en": "Speech · Fed (Warsh)"
       },
       "short": {
         "fr": "Fed (Warsh)",
@@ -89,35 +94,38 @@
         "fr": [
           {
             "label": "C’est quoi",
-            "text": "Une intervention publique du président de la Réserve fédérale, la banque centrale des États-Unis."
+            "text": "Une prise de parole publique d’un dirigeant de la Fed."
           },
           {
             "label": "Pourquoi ça bouge",
-            "text": "Le marché guette le moindre indice sur les prochaines décisions de taux. Une seule phrase peut suffire à faire bouger le dollar, les indices US et l’or."
+            "text": "Le marché guette le moindre indice sur les prochaines décisions de taux : une seule phrase peut faire bouger le dollar."
           },
           {
             "label": "À savoir",
-            "text": "Contrairement à une stat, on ne sait pas à quelle minute arrive la phrase qui compte : la volatilité peut tomber à n’importe quel moment, questions comprises."
+            "text": "Contrairement à une stat, on ne sait pas à quelle minute arrive la phrase qui compte, questions comprises."
           }
         ],
         "en": [
           {
             "label": "What it is",
-            "text": "A public appearance by the Chair of the Federal Reserve, the US central bank."
+            "text": "A public appearance by a the Fed policymaker."
           },
           {
             "label": "Why it moves",
-            "text": "Markets look for any hint about the next rate decisions. A single sentence can move the dollar, US indices and gold."
+            "text": "Markets look for any hint about the next rate decisions: a single line can move the dollar."
           },
           {
             "label": "Good to know",
-            "text": "Unlike a data release, you don’t know which minute the key line will come: volatility can hit at any point, Q&A included."
+            "text": "Unlike a data release, you don’t know which minute the key line will come, Q&A included."
           }
         ]
-      }
+      },
+      "source": [
+        "Fed Chairman Warsh Speaks"
+      ]
     },
     {
-      "id": "2026-11-16-aud-bullock",
+      "id": "2026-11-16-2250-aud-speech",
       "time": "2026-11-16T22:50:00Z",
       "ccy": "AUD",
       "kind": "speech",
@@ -127,8 +135,8 @@
         "after": null
       },
       "title": {
-        "fr": "Discours de la gouverneure de la RBA (Bullock)",
-        "en": "RBA Governor Bullock speaks"
+        "fr": "Discours · RBA (Bullock)",
+        "en": "Speech · RBA (Bullock)"
       },
       "short": {
         "fr": "RBA (Bullock)",
@@ -142,35 +150,38 @@
         "fr": [
           {
             "label": "C’est quoi",
-            "text": "Une intervention publique de la gouverneure de la Banque de réserve d’Australie."
+            "text": "Une prise de parole publique d’un dirigeant de la Banque de réserve d’Australie."
           },
           {
             "label": "Pourquoi ça bouge",
-            "text": "Le marché y cherche des indices sur les prochaines décisions de taux australiennes ; un ton plus dur ou plus souple que prévu fait bouger le dollar australien."
+            "text": "Le marché guette le moindre indice sur les prochaines décisions de taux : une seule phrase peut faire bouger le dollar australien."
           },
           {
             "label": "À savoir",
-            "text": "Pour l’Europe, ça tombe en fin de soirée, pendant la session asiatique où la liquidité est plus faible."
+            "text": "Contrairement à une stat, on ne sait pas à quelle minute arrive la phrase qui compte, questions comprises."
           }
         ],
         "en": [
           {
             "label": "What it is",
-            "text": "A public appearance by the Governor of the Reserve Bank of Australia."
+            "text": "A public appearance by a the Reserve Bank of Australia policymaker."
           },
           {
             "label": "Why it moves",
-            "text": "Markets look for hints about the next Australian rate decisions; a more hawkish or dovish tone than expected moves the Australian dollar."
+            "text": "Markets look for any hint about the next rate decisions: a single line can move the Australian dollar."
           },
           {
             "label": "Good to know",
-            "text": "For Europe it lands late in the evening, during the Asian session when liquidity is thinner."
+            "text": "Unlike a data release, you don’t know which minute the key line will come, Q&A included."
           }
         ]
-      }
+      },
+      "source": [
+        "RBA Gov Bullock Speaks"
+      ]
     },
     {
-      "id": "2026-11-17-nzd-inflation-expectations",
+      "id": "2026-11-17-0200-nzd-infexp",
       "time": "2026-11-17T02:00:00Z",
       "ccy": "NZD",
       "kind": "data",
@@ -195,35 +206,38 @@
         "fr": [
           {
             "label": "C’est quoi",
-            "text": "Une enquête trimestrielle de la banque centrale néo-zélandaise : l’inflation que les entreprises attendent pour les deux prochaines années."
+            "text": "Une enquête sur l’inflation que les entreprises ou les ménages attendent dans les prochaines années."
           },
           {
             "label": "Pourquoi ça bouge",
-            "text": "La RBNZ s’en sert pour juger si l’inflation est sous contrôle : un chiffre plus haut que prévu renforce les paris sur des taux élevés, et souvent le dollar néo-zélandais."
+            "text": "La banque centrale néo-zélandaise s’en sert pour juger si l’inflation est sous contrôle : une hausse renforce les paris sur des taux élevés."
           },
           {
             "label": "À savoir",
-            "text": "Publiée en pleine nuit pour l’Europe ; ça concerne surtout les paires en NZD."
+            "text": "Ça concerne surtout les paires en NZD."
           }
         ],
         "en": [
           {
             "label": "What it is",
-            "text": "A quarterly survey by New Zealand’s central bank: the inflation businesses expect over the next two years."
+            "text": "A survey of the inflation businesses or households expect over the coming years."
           },
           {
             "label": "Why it moves",
-            "text": "The RBNZ uses it to judge whether inflation is under control: a higher reading than expected supports bets on high rates, and often the New Zealand dollar."
+            "text": "The Reserve Bank of New Zealand uses it to judge whether inflation is under control: a rise supports bets on high rates."
           },
           {
             "label": "Good to know",
-            "text": "Released in the middle of the night for Europe; it mainly affects NZD pairs."
+            "text": "It mainly affects NZD pairs."
           }
         ]
-      }
+      },
+      "source": [
+        "Inflation Expectations q/q"
+      ]
     },
     {
-      "id": "2026-11-17-usd-retail-sales",
+      "id": "2026-11-17-1330-usd-retail",
       "time": "2026-11-17T13:30:00Z",
       "ccy": "USD",
       "kind": "data",
@@ -244,43 +258,47 @@
         "fr": "Indices US · Or · Paires en USD",
         "en": "US indices · Gold · USD pairs"
       },
-      "note": {
-        "fr": "2 chiffres : ventes totales et ventes hors automobiles.",
-        "en": "2 figures: headline and ex-autos."
-      },
       "explain": {
         "fr": [
           {
             "label": "C’est quoi",
-            "text": "L’évolution des dépenses des ménages américains en magasin et en ligne sur un mois."
+            "text": "L’évolution des dépenses des ménages en magasin et en ligne sur un mois."
           },
           {
             "label": "Pourquoi ça bouge",
-            "text": "La consommation pèse environ deux tiers de l’économie américaine : un chiffre fort ou faible change la vision de la croissance et des taux de la Fed."
+            "text": "La consommation pèse lourd dans l’économie : un chiffre fort ou faible change la vision de la croissance et des taux."
           },
           {
             "label": "À savoir",
-            "text": "La première minute est souvent très agitée sur le dollar, les indices US et l’or, surtout si les deux chiffres vont dans des sens opposés."
+            "text": "La première minute est souvent agitée, surtout si plusieurs chiffres vont dans des sens opposés."
           }
         ],
         "en": [
           {
             "label": "What it is",
-            "text": "The monthly change in US household spending, in stores and online."
+            "text": "The monthly change in household spending, in stores and online."
           },
           {
             "label": "Why it moves",
-            "text": "Consumption is roughly two thirds of the US economy: a strong or weak print changes the outlook for growth and Fed rates."
+            "text": "Consumption is a big part of the economy: a strong or weak print changes the outlook for growth and rates."
           },
           {
             "label": "Good to know",
-            "text": "The first minute is often choppy on the dollar, US indices and gold, especially if the two figures point in opposite directions."
+            "text": "The first minute is often choppy, especially if several figures point in opposite directions."
           }
         ]
+      },
+      "source": [
+        "Core Retail Sales m/m",
+        "Retail Sales m/m"
+      ],
+      "note": {
+        "fr": "2 chiffres publiés en même temps : Core Retail Sales m/m, Retail Sales m/m.",
+        "en": "2 figures at once: Core Retail Sales m/m, Retail Sales m/m."
       }
     },
     {
-      "id": "2026-11-18-gbp-cpi",
+      "id": "2026-11-18-0700-gbp-cpi",
       "time": "2026-11-18T07:00:00Z",
       "ccy": "GBP",
       "kind": "data",
@@ -305,35 +323,38 @@
         "fr": [
           {
             "label": "C’est quoi",
-            "text": "L’évolution des prix à la consommation au Royaume-Uni sur un an."
+            "text": "L’évolution des prix à la consommation au Royaume-Uni."
           },
           {
             "label": "Pourquoi ça bouge",
-            "text": "C’est le chiffre que la Banque d’Angleterre surveille le plus pour fixer ses taux : une surprise fait nettement bouger la livre."
+            "text": "C’est l’un des chiffres que la Banque d’Angleterre surveille le plus pour fixer ses taux : une surprise change les attentes et fait bouger la livre."
           },
           {
             "label": "À savoir",
-            "text": "Publié à 7:00 heure de Londres, avant l’ouverture des marchés européens : le mouvement se fait dans un marché encore peu liquide."
+            "text": "Plusieurs mesures tombent souvent en même temps : la première réaction peut se retourner si elles se contredisent."
           }
         ],
         "en": [
           {
             "label": "What it is",
-            "text": "The yearly change in consumer prices in the United Kingdom."
+            "text": "The change in consumer prices in UK."
           },
           {
             "label": "Why it moves",
-            "text": "It’s the figure the Bank of England watches most when setting rates: a surprise clearly moves the pound."
+            "text": "It’s one of the figures the Bank of England watches most when setting rates: a surprise shifts expectations and moves the pound."
           },
           {
             "label": "Good to know",
-            "text": "Released at 7:00 London time, before European markets open: the move happens while liquidity is still thin."
+            "text": "Several measures often land at once: the first move can reverse if they disagree."
           }
         ]
-      }
+      },
+      "source": [
+        "CPI y/y"
+      ]
     },
     {
-      "id": "2026-11-18-gbp-bailey",
+      "id": "2026-11-18-1500-gbp-speech",
       "time": "2026-11-18T15:00:00Z",
       "ccy": "GBP",
       "kind": "speech",
@@ -343,8 +364,8 @@
         "after": null
       },
       "title": {
-        "fr": "Discours du gouverneur de la BoE (Bailey)",
-        "en": "BoE Governor Bailey speaks"
+        "fr": "Discours · BoE (Bailey)",
+        "en": "Speech · BoE (Bailey)"
       },
       "short": {
         "fr": "BoE (Bailey)",
@@ -358,35 +379,38 @@
         "fr": [
           {
             "label": "C’est quoi",
-            "text": "Une intervention publique du gouverneur de la Banque d’Angleterre."
+            "text": "Une prise de parole publique d’un dirigeant de la Banque d’Angleterre."
           },
           {
             "label": "Pourquoi ça bouge",
-            "text": "Quelques heures après l’inflation britannique, le marché guette sa lecture du chiffre et ce qu’il laisse entendre sur les prochains taux."
+            "text": "Le marché guette le moindre indice sur les prochaines décisions de taux : une seule phrase peut faire bouger la livre."
           },
           {
             "label": "À savoir",
-            "text": "Comme pour tout discours, on ne sait pas à quelle minute arrive la phrase qui compte."
+            "text": "Contrairement à une stat, on ne sait pas à quelle minute arrive la phrase qui compte, questions comprises."
           }
         ],
         "en": [
           {
             "label": "What it is",
-            "text": "A public appearance by the Governor of the Bank of England."
+            "text": "A public appearance by a the Bank of England policymaker."
           },
           {
             "label": "Why it moves",
-            "text": "A few hours after UK inflation, markets want his read on the number and any hint about the next rate moves."
+            "text": "Markets look for any hint about the next rate decisions: a single line can move the pound."
           },
           {
             "label": "Good to know",
-            "text": "As with any speech, you don’t know which minute the key line will come."
+            "text": "Unlike a data release, you don’t know which minute the key line will come, Q&A included."
           }
         ]
-      }
+      },
+      "source": [
+        "BOE Gov Bailey Speaks"
+      ]
     },
     {
-      "id": "2026-11-18-usd-fomc-minutes",
+      "id": "2026-11-18-1900-usd-minutes",
       "time": "2026-11-18T19:00:00Z",
       "ccy": "USD",
       "kind": "minutes",
@@ -396,12 +420,12 @@
         "after": 30
       },
       "title": {
-        "fr": "Compte rendu de la Fed (minutes du FOMC)",
-        "en": "Fed meeting minutes (FOMC)"
+        "fr": "Compte rendu de la Fed",
+        "en": "Fed minutes"
       },
       "short": {
-        "fr": "Minutes FOMC",
-        "en": "FOMC minutes"
+        "fr": "Minutes Fed",
+        "en": "Fed minutes"
       },
       "assets": {
         "fr": "Indices US · Or · Paires en USD",
@@ -411,35 +435,38 @@
         "fr": [
           {
             "label": "C’est quoi",
-            "text": "Le compte rendu détaillé de la dernière réunion de la Fed, publié trois semaines après."
+            "text": "Le compte rendu détaillé de la dernière réunion de la Fed."
           },
           {
             "label": "Pourquoi ça bouge",
-            "text": "Il montre si les membres penchent vers des baisses ou des hausses de taux : le marché le lit très vite, et le dollar, les indices US et l’or réagissent."
+            "text": "Il montre si les membres penchent vers des baisses ou des hausses de taux : le marché le lit très vite et le dollar réagit."
           },
           {
             "label": "À savoir",
-            "text": "Ça tombe en fin de séance américaine, quand beaucoup de traders européens ne sont plus devant l’écran."
+            "text": "La décision est déjà connue : c’est le ton des débats qui peut surprendre."
           }
         ],
         "en": [
           {
             "label": "What it is",
-            "text": "The detailed record of the last Fed meeting, released three weeks later."
+            "text": "The detailed record of the Fed’s last meeting."
           },
           {
             "label": "Why it moves",
-            "text": "It shows whether members lean towards cuts or hikes: markets read it fast, and the dollar, US indices and gold react."
+            "text": "It shows whether members lean towards cuts or hikes: markets read it fast and the dollar reacts."
           },
           {
             "label": "Good to know",
-            "text": "It lands late in the US session, when many European traders have already logged off."
+            "text": "The decision is already known: it’s the tone of the debate that can surprise."
           }
         ]
-      }
+      },
+      "source": [
+        "FOMC Meeting Minutes"
+      ]
     },
     {
-      "id": "2026-11-19-aud-jobs",
+      "id": "2026-11-19-0030-aud-jobs",
       "time": "2026-11-19T00:30:00Z",
       "ccy": "AUD",
       "kind": "data",
@@ -460,94 +487,49 @@
         "fr": "Paires en AUD (AUD/USD, AUD/JPY…)",
         "en": "AUD pairs (AUD/USD, AUD/JPY…)"
       },
-      "note": {
-        "fr": "2 chiffres : créations d’emplois et taux de chômage.",
-        "en": "2 figures: employment change and unemployment rate."
-      },
       "explain": {
         "fr": [
           {
             "label": "C’est quoi",
-            "text": "Le nombre d’emplois créés ou perdus en Australie sur le mois, et le taux de chômage."
+            "text": "Les chiffres de l’emploi en Australie : créations d’emplois, chômage ou salaires selon la publication."
           },
           {
             "label": "Pourquoi ça bouge",
-            "text": "C’est l’un des chiffres que la Banque de réserve d’Australie regarde le plus : une surprise fait souvent bouger le dollar australien de façon nette."
+            "text": "La Banque de réserve d’Australie les regarde de près pour décider de ses taux : une surprise fait souvent bouger le dollar australien de façon nette."
           },
           {
             "label": "À savoir",
-            "text": "Publié en pleine nuit pour l’Europe, pendant la session asiatique."
+            "text": "Quand plusieurs chiffres tombent ensemble, la première réaction peut se retourner s’ils se contredisent."
           }
         ],
         "en": [
           {
             "label": "What it is",
-            "text": "The number of jobs created or lost in Australia over the month, plus the unemployment rate."
+            "text": "Employment figures for Australia: job creation, unemployment or wages depending on the release."
           },
           {
             "label": "Why it moves",
-            "text": "It’s one of the figures the Reserve Bank of Australia watches most: a surprise often moves the Australian dollar sharply."
+            "text": "The Reserve Bank of Australia watches them closely when setting rates: a surprise often moves the Australian dollar sharply."
           },
           {
             "label": "Good to know",
-            "text": "Released in the middle of the night for Europe, during the Asian session."
+            "text": "When several figures land together, the first move can reverse if they disagree."
           }
         ]
+      },
+      "source": [
+        "Employment Change",
+        "Unemployment Rate"
+      ],
+      "note": {
+        "fr": "2 chiffres publiés en même temps : Employment Change, Unemployment Rate.",
+        "en": "2 figures at once: Employment Change, Unemployment Rate."
       }
     }
   ],
   "notes": [
     {
-      "id": "2026-11-23-jpy-holiday",
-      "date": "2026-11-23",
-      "ccy": "JPY",
-      "closed": false,
-      "short": false,
-      "kind": {
-        "fr": "Férié Japon",
-        "en": "Japan holiday"
-      },
-      "title": {
-        "fr": "Fête du Travail au Japon",
-        "en": "Labour Thanksgiving Day (Japan)"
-      },
-      "sub": {
-        "fr": "Marchés japonais fermés · paires en JPY plus calmes en session asiatique",
-        "en": "Japanese markets closed · quieter JPY pairs in the Asian session"
-      },
-      "explain": {
-        "fr": [
-          {
-            "label": "C’est quoi",
-            "text": "La fête du Travail japonaise, chaque 23 novembre. Les marchés et les banques du Japon sont fermés."
-          },
-          {
-            "label": "Ce que ça change",
-            "text": "La session asiatique est plus calme que d’habitude, surtout sur les paires en JPY."
-          },
-          {
-            "label": "À savoir",
-            "text": "Peu d’impact en dehors de la session asiatique, mais les mouvements de la nuit peuvent être moins représentatifs."
-          }
-        ],
-        "en": [
-          {
-            "label": "What it is",
-            "text": "Japan’s Labour Thanksgiving Day, every 23 November. Japanese markets and banks are closed."
-          },
-          {
-            "label": "What it changes",
-            "text": "The Asian session is quieter than usual, especially on JPY pairs."
-          },
-          {
-            "label": "Good to know",
-            "text": "Little impact outside the Asian session, but overnight moves can be less meaningful."
-          }
-        ]
-      }
-    },
-    {
-      "id": "2026-11-26-usd-thanksgiving",
+      "id": "2026-11-26-usd-closed",
       "date": "2026-11-26",
       "ccy": "USD",
       "closed": true,
@@ -568,7 +550,7 @@
         "fr": [
           {
             "label": "C’est quoi",
-            "text": "La fête nationale américaine du 4e jeudi de novembre. Les bourses américaines sont fermées toute la journée."
+            "text": "Un jour férié aux États-Unis : les bourses américaines sont fermées toute la journée."
           },
           {
             "label": "Ce que ça change",
@@ -576,13 +558,13 @@
           },
           {
             "label": "À savoir",
-            "text": "Peu de volume veut dire des spreads plus larges et des mouvements parfois erratiques. Beaucoup de traders font le pont jusqu’à lundi."
+            "text": "Peu de volume veut dire des spreads plus larges et des mouvements parfois erratiques."
           }
         ],
         "en": [
           {
             "label": "What it is",
-            "text": "The US national holiday on the fourth Thursday of November. US exchanges are closed all day."
+            "text": "A US public holiday: US exchanges are closed all day."
           },
           {
             "label": "What it changes",
@@ -590,7 +572,7 @@
           },
           {
             "label": "Good to know",
-            "text": "Thin volume means wider spreads and sometimes erratic moves. Many traders take a long weekend."
+            "text": "Thin volume means wider spreads and sometimes erratic moves."
           }
         ]
       }
@@ -617,7 +599,7 @@
         "fr": [
           {
             "label": "C’est quoi",
-            "text": "Le lendemain de Thanksgiving, les bourses américaines ferment à 13:00 heure de New York."
+            "text": "Les bourses américaines ferment plus tôt que d’habitude ce jour-là, à 13:00 heure de New York."
           },
           {
             "label": "Ce que ça change",
@@ -631,7 +613,7 @@
         "en": [
           {
             "label": "What it is",
-            "text": "The day after Thanksgiving, US exchanges close at 1:00 pm New York time."
+            "text": "US exchanges close earlier than usual that day, at 13:00 New York time."
           },
           {
             "label": "What it changes",
